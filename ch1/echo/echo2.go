@@ -1,5 +1,5 @@
 // Echo2 prints its command-line arguments.
-package ch1
+package main
 
 func rangeLoop(args []string) string {
 	s, sep := "", ""

@@ -1,5 +1,5 @@
 // Fetch prints the content found at a URL.
-package ch1
+package main
 
 import (
 	"fmt"
