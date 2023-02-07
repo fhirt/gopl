@@ -5,5 +5,5 @@ import (
 )
 
 func main() {
-	ch1.CountDuplicates()
+	ch1.Dup3()
 }
