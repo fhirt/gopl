@@ -4,6 +4,8 @@ package main
 import (
 	"fmt"
 	"gopl/ch1/lissajous"
+	"gopl/ch3/mandelbrot"
+	"gopl/ch3/surface"
 	"log"
 	"net/http"
 	"sync"
@@ -16,6 +18,8 @@ func main() {
 	http.HandleFunc("/", handler) // each request calls handler
 	http.HandleFunc("/count", counter)
 	http.HandleFunc("/gif", gif)
+	http.HandleFunc("/surface", surf)
+	http.HandleFunc("/mandelbrot", mandel)
 	log.Fatal(http.ListenAndServe("localhost:8000", nil))
 }
 
@@ -47,4 +51,13 @@ func counter(w http.ResponseWriter, r *http.Request) {
 
 func gif(w http.ResponseWriter, r *http.Request) {
 	lissajous.Lissajous(w)
+}
+
+func surf(w http.ResponseWriter, r *http.Request) {
+	w.Header().Set("Content-Type", "image/svg+xml")
+	surface.Surface(w)
+}
+
+func mandel(w http.ResponseWriter, r *http.Request) {
+	mandelbrot.Mandelbrot(w)
 }
