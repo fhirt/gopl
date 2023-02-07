@@ -1,16 +1,11 @@
 // Echo1 prints its command-line arguments.
-package main
+package ch1
 
-import (
-	"fmt"
-	"os"
-)
-
-func main() {
+func forLoop(args []string) string {
 	var s, sep string
-	for i := 1; i < len(os.Args); i++ {
-		s += sep + os.Args[i]
+	for i := 1; i < len(args); i++ {
+		s += sep + args[i]
 		sep = " "
 	}
-	fmt.Println(s)
+	return s
 }

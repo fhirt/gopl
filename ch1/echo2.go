@@ -1,17 +1,11 @@
 // Echo2 prints its command-line arguments.
-package main
+package ch1
 
-import (
-	"fmt"
-	"os"
-)
-
-func main() {
+func rangeLoop(args []string) string {
 	s, sep := "", ""
-	for idx, arg := range os.Args[1:] {
+	for _, arg := range args[1:] {
 		s += sep + arg
 		sep = " "
-		fmt.Println(idx)
 	}
-	fmt.Println(s)
+	return s
 }

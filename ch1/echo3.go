@@ -1,11 +1,9 @@
-package main
+package ch1
 
 import (
-	"fmt"
-	"os"
 	"strings"
 )
 
-func main() {
-	fmt.Println(strings.Join(os.Args[1:], " "))
+func stringsJoin(args []string) string {
+	return strings.Join(args[1:], " ")
 }
