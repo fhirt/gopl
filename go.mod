@@ -1,3 +1,3 @@
-module ch1
+module gopl
 
 go 1.18
