@@ -9,7 +9,7 @@ import (
 	"time"
 )
 
-func main() {
+func fetchAll() {
 	start := time.Now()
 	ch := make(chan string)
 	for _, url := range os.Args[1:] {

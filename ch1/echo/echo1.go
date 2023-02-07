@@ -1,5 +1,5 @@
 // Echo1 prints its command-line arguments.
-package main
+package echo
 
 func forLoop(args []string) string {
 	var s, sep string

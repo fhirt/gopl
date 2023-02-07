@@ -8,6 +8,10 @@ import (
 	"os"
 )
 
+func main() {
+	Fetch()
+}
+
 func Fetch() {
 	for _, url := range os.Args[1:] {
 		resp, err := http.Get(url)
